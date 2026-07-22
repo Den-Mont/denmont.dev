@@ -1,0 +1,46 @@
+.background {
+  background-color: #000204;
+  box-sizing: border-box;
+  min-height: calc(100vh - 16px);
+  padding: 32px;
+  border-radius: 40px; 
+  color: #ffffff;
+}
+
+.background a {
+  color: #ffffff;
+}
+
+.navbar {
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #eadfd5;
+  }
+
+  ul li {
+    margin: 0; 
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    border-radius: 20px;
+    background-color: #d7c5b5;
+  }
+}
+
+.navbar a {
+  color: #000000;
+}
