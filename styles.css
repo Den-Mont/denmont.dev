@@ -28,7 +28,7 @@ p {
 
 .name {
   margin: 0 0 1.5rem;
-  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -0.03em;
@@ -43,20 +43,21 @@ p {
   opacity: 0.35;
 }
 
-.image-placeholder {
+.profile-image {
+  display: block;
   width: min(100%, 18rem);
   aspect-ratio: 1;
   border-radius: 2rem;
-  background-color: #55b5df;
+  object-fit: cover;
 }
 
 .about-layout {
   display: grid;
   grid-template-columns: minmax(16rem, 20rem) minmax(0, 42rem);
   align-items: center;
-  gap: clamp(3rem, 8vw, 7rem);
+  gap: clamp(2.5rem, 6vw, 5rem);
   width: min(100%, 70rem);
-  margin: auto;
+  margin: clamp(3rem, 8vh, 5rem) auto;
 }
 
 .about-copy {
@@ -64,8 +65,12 @@ p {
   line-height: 1.55;
 }
 
-.about-copy p:last-child {
-  margin-bottom: 0;
+.about-copy p {
+  margin: 0;
+}
+
+.about-copy p + p {
+  margin-top: 1.25rem;
 }
 
 @media (max-width: 48rem) {
