@@ -2,7 +2,7 @@
 
 :root {
   --color-background: #000204;
-  --color-control: #cccccf;
+  --color-control: #e8e8f3;
   --color-hover: #6f6f73;
   --color-card: #202020;
   --color-accent: #9ecae1;
@@ -64,6 +64,7 @@ body {
 }
 
 .navbar a[aria-current="page"] {
+  color: var(--color-light);
   background-color: var(--color-hover);
 }
 
