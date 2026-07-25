@@ -215,17 +215,26 @@ body {
   position: relative;
 }
 
-.back-link {
+.background .back-link {
   position: absolute;
   top: 1.5rem;
   left: clamp(0rem, 2vw, 1.5rem);
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-control);
+  color: var(--color-dark);
+  background-color: var(--color-control);
+  font-size: 0.95rem;
   line-height: 1;
   text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.background .back-link:hover {
+  color: var(--color-light);
+  background-color: var(--color-hover);
 }
 
 .post-header {
@@ -285,10 +294,41 @@ body {
 }
 
 @media (max-width: 48rem) {
+  .background {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .navbar ul {
+    justify-content: stretch;
+  }
+
+  .navbar li {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar a {
+    width: fit-content;
+    padding: 10px clamp(12px, 4vw, 20px);
+    font-size: 0.9rem;
+  }
+
   .about-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     margin-block: 3rem;
+  }
+
+  .name {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 18rem;
   }
 
   .about-copy {
@@ -300,12 +340,35 @@ body {
     margin-top: 1.5rem;
   }
 
+  .blog-page {
+    margin-block: 2.5rem;
+  }
+
+  .blog-intro h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
   .blog-entry {
     grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 1rem;
   }
 
   .blog-entry-image {
     width: 5rem;
     height: 5rem;
+  }
+
+  .post-page {
+    align-items: flex-start;
+    padding-top: 5rem;
+  }
+
+  .background .back-link {
+    top: 1rem;
+    left: 0;
+  }
+
+  .post {
+    margin: 0 auto 2rem;
   }
 }
