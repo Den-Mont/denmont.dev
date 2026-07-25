@@ -4,6 +4,8 @@
   --color-background: #000204;
   --color-control: #cccccf;
   --color-hover: #6f6f73;
+  --color-card: #202020;
+  --color-accent: #9ecae1;
   --color-light: #ffffff;
   --color-dark: #000000;
   --radius-panel: 40px;
@@ -205,6 +207,82 @@ body {
   margin-right: 0.5rem;
 }
 
+.projects-page {
+  width: min(100%, 70rem);
+  margin: auto;
+}
+
+.projects-intro {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-hover);
+}
+
+.projects-intro h1,
+.projects-intro p {
+  margin: 0;
+  font-family: "EB Garamond", serif;
+}
+
+.projects-intro h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 600;
+}
+
+.projects-intro p {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 13rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background-color: var(--color-card);
+}
+
+.project-card h2,
+.project-card p {
+  margin: 0;
+}
+
+.project-card h2 {
+  font-size: 1.25rem;
+}
+
+.project-tools {
+  margin-top: 0.35rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+}
+
+.project-summary {
+  margin-top: 1rem;
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.55rem 1rem;
+  border: 1px dashed var(--color-control);
+  border-radius: var(--radius-control);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--color-dark);
+  background-color: var(--color-control);
+}
+
 .post {
   width: min(100%, 45rem);
   margin: auto;
@@ -358,6 +436,18 @@ body {
     height: 5rem;
   }
 
+  .projects-page {
+    margin-block: 2.5rem;
+  }
+
+  .projects-intro h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   .post-page {
     align-items: flex-start;
     padding-top: 5rem;
@@ -370,5 +460,11 @@ body {
 
   .post {
     margin: 0 auto 2rem;
+  }
+}
+
+@media (min-width: 48.01rem) and (max-width: 64rem) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
