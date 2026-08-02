@@ -5,22 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog | Denzel Montes-Melendez</title>
-    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+    <script src="/components.js" defer></script>
 </head>
 
 <body>
     <div class="background">
-        <header>
-            <nav class="navbar" aria-label="Primary navigation">
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html" aria-current="page">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
+        <site-header></site-header>
 
         <main class="page-content">
             <section class="blog-page">
@@ -30,8 +23,8 @@
                 </header>
 
                 <div class="blog-list">
-                    <a class="blog-entry" href="posts/making-of-port/">
-                        <img class="blog-entry-image" src="assets/icon.svg" alt="Pixel-art portrait of Denzel Montes-Melendez" width="24" height="24">
+                    <a class="blog-entry" href="../posts/making-of-port/">
+                        <img class="blog-entry-image" src="../assets/icon.svg" alt="Pixel-art portrait of Denzel Montes-Melendez" width="24" height="24">
 
                         <div class="blog-entry-content">
                             <h2>The Making-of this portfolio</h2>
@@ -43,8 +36,8 @@
                         </div>
                     </a>
 
-                    <a class="blog-entry" href="posts/first-post/">
-                        <img class="blog-entry-image" src="posts/assets/first-post/thumbnail.jpg" alt="Jolyne, a Shiba Inu" width="1179" height="1469">
+                    <a class="blog-entry" href="../posts/first-post/">
+                        <img class="blog-entry-image" src="../posts/assets/first-post/thumbnail.jpg" alt="Jolyne, a Shiba Inu" width="1179" height="1469">
 
                         <div class="blog-entry-content">
                             <h2>Welcome to my blog!</h2>
@@ -59,19 +52,7 @@
             </section>
         </main>
 
-        <footer>
-            <nav class="social-navbar" aria-label="Social media links">
-                <a href="https://github.com/Den-Mont" aria-label="GitHub">
-                    <i class="hgi-stroke hgi-github-01" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.youtube.com/" aria-label="YouTube">
-                    <i class="hgi-stroke hgi-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/" aria-label="LinkedIn">
-                    <i class="hgi-stroke hgi-linkedin-01" aria-hidden="true"></i>
-                </a>
-            </nav>
-        </footer>
+        <site-footer></site-footer>
     </div>
 </body>
 
