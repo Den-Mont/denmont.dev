@@ -167,6 +167,17 @@ body {
   grid-template-columns: 8rem minmax(0, 1fr);
   align-items: center;
   gap: 1.25rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+}
+
+.blog-entry:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 0.5rem;
+}
+
+.blog-entry + .blog-entry {
+  margin-top: 1.75rem;
 }
 
 .blog-entry-image {
@@ -184,10 +195,6 @@ body {
 
 .blog-entry h2 {
   font-size: 1.25rem;
-}
-
-.blog-entry h2 a {
-  text-decoration: none;
 }
 
 .blog-entry p {
