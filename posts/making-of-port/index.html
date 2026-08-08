@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <div class="background">
+    <div class="background post-layout">
         <site-header></site-header>
 
         <main class="page-content post-page">
-            <a class="back-link" href="../../blog/">
-                <span aria-hidden="true">&lt;</span>
+            <a class="back-link" href="../../blog/" aria-label="Back to blog">
+                <i class="hgi-stroke hgi-arrow-left-02" aria-hidden="true"></i>
             </a>
 
             <article class="post">
@@ -26,12 +26,138 @@
                     <time datetime="2026-08-02">August 2, 2026</time>
                 </header>
 
-                    <p>Before I keep on with publishing old and new projects, I thought it would be nice to have an entry describing how I made my portfolio and my tought process around it. It is quite simple, so I will divide this in 4 sections: <span style="text-decoration: underline;">Design</span>, <span style="text-decoration: underline;">Tech Stack</span>, <span style="text-decoration: underline;">Implementation</span> and <span style="text-decoration: underline;">Future Plans</span>.</p>
-                    
-                    <h2>Design:</h2>
-                    <p>As I wanted to keep my portfolio as simple as possible, I used Freeform to see what I could design with the original simple shapes available. It is undeniable that I went for an Apple's minimalistic approach for the UI, but I wanted to make something elegant that anyone could use intuitively. Here are those original mock-ups for the design:</p>
+                <p>Before I move on to publishing old and new projects, I thought it would be nice to have an entry
+                    describing how I made my portfolio and the thought process behind it. It is quite simple, so I will
+                    divide this into three sections: <span style="text-decoration: underline;">Design</span>, <span
+                        style="text-decoration: underline;">Tech Stack</span>, <span
+                        style="text-decoration: underline;">Implementation</span>.</p>
 
-                    <p style="font-size: smaller;">Note: The views expressed here are my own and do not represent those of any past, present, or future employer.</p>
+                <h2>Design:</h2>
+                <p>As I wanted to keep my portfolio as simple as possible, I used Freeform to explore what I could
+                    create using only its original basic shapes. It is undeniable that I leaned toward Apple's
+                    minimalist design philosophy for the UI. The goal was to build something elegant with a simple
+                    visual language that anyone could use intuitively after a few interactions. Here are the original
+                    mock-ups for the design:</p>
+
+                <div class="post-mockups" aria-label="Original portfolio design mock-ups">
+                    <figure>
+                        <img src="../assets/making-of-port/about-mockup.jpg"
+                            alt="Original mock-up of the portfolio About page" width="1179" height="793" loading="lazy"
+                            decoding="async">
+                        <figcaption>About page</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../assets/making-of-port/projects-mockup.jpg"
+                            alt="Original mock-up of the portfolio Projects page" width="1179" height="809"
+                            loading="lazy" decoding="async">
+                        <figcaption>Projects page</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../assets/making-of-port/blog-mockup.jpg"
+                            alt="Original mock-up of the portfolio Blog page" width="1179" height="784" loading="lazy"
+                            decoding="async">
+                        <figcaption>Blog page</figcaption>
+                    </figure>
+                </div>
+
+                <p>Although they are very similar to the final version, the easiest difference to spot is the font. I
+                    ultimately chose EB Garamond because I'm an avid reader and a long-time subscriber to <a
+                        href="https://www.economist.com/">The Economist</a>.
+                    It was the closest free-to-use font I could find to the one they use and it really makes the blog
+                    entries and About section feel closer to reading an essay or magazine than a software portfolio. For
+                    the icons, I used free versions that matched the looks I was going for on <a
+                        href="https://hugeicons.com">Hugeicons</a>.</p>
+                <p>Another, (slightly more difficult to spot) difference is the color palette I ended up using. My
+                    intention with these was to maintain a set of neutral colors, with a few eye-catching ones where I
+                    thought the contrast could make the content easier to read. Since the beginning I wanted to avoid
+                    using vibrant colors or animations, and keep this static so the content could resonate best. For the
+                    sake of making this easier to read, here they are:</p>
+                </p>
+                <ul class="color-list" aria-label="Portfolio color palette">
+                    <li><span style="--swatch: #000204; --outline: #FFFDFB"
+                            aria-hidden="true"></span><code>#000204</code> Primary background</li>
+                    <li><span style="--swatch: #E8E8F3; --outline: #17170C"
+                            aria-hidden="true"></span><code>#E8E8F3</code> Controls, secondary text, metadata, and
+                        social buttons</li>
+                    <li><span style="--swatch: #6F6F73; --outline: #90908C"
+                            aria-hidden="true"></span><code>#6F6F73</code> Hover and selected-navigation states</li>
+                    <li><span style="--swatch: #202020; --outline: #DFDFDF"
+                            aria-hidden="true"></span><code>#202020</code> Project cards</li>
+                    <li><span style="--swatch: #9ECAE1; --outline: #61351E"
+                            aria-hidden="true"></span><code>#9ECAE1</code> Accent and keyboard focus color</li>
+                    <li><span style="--swatch: #FFFFFF; --outline: #000000"
+                            aria-hidden="true"></span><code>#FFFFFF</code> Primary text</li>
+                    <li><span style="--swatch: #000000; --outline: #FFFFFF"
+                            aria-hidden="true"></span><code>#000000</code> Dark text on light controls</li>
+                </ul>
+
+                <p>As a final thought, I'd like to explain that I chose to begin with this section because I believe
+                    visuals in software matter. While functionality is important for obvious reasons, thoughtful design
+                    is just as important. Software that is both functional and visually appealing is more likely to
+                    resonate with its users and leave a lasting impression.</p>
+
+                <h2>Tech Stack:</h2>
+                <p>As I'm trying to save as much video-game money as possible, this begins with getting the
+                    very simple domain you're in (props to Mr. Delimarsky for beating me to <a
+                        href="https://den.dev">den.dev</a>) and hosting everything on Vercel (I know, though it is best
+                    suited to what I need for this portfolio). The stack is plain HTML, CSS and JavaScript.</p>
+                <p>Now, why go for a static HTML/CSS/JS portfolio and not make use of the many different frameworks out
+                    there? It is quite simple actually: there is no need for one yet. Maybe if I keep the habit of
+                    rambling in here I can change my mind and make this specific section dynamic, but for the moment,
+                    this is all that's needed.</p>
+
+                <h2>Implementation:</h2>
+                <p>Though I really should add this to this project's README.md, heres the project's folder structure:
+                </p>
+                <pre aria-label="Project folder structure"><code>denmont.dev/
+├── assets/
+│   ├── images/
+│   │   └── profile.jpeg
+│   └── icon.svg
+├── blog/
+│   └── index.html
+├── posts/
+│   ├── assets/
+│   │   ├── first-post/
+│   │   │   └── thumbnail.jpg
+│   │   └── making-of-port/
+│   │       ├── about-mockup.jpg
+│   │       ├── blog-mockup.jpg
+│   │       └── projects-mockup.jpg
+│   ├── first-post/
+│   │   └── index.html
+│   └── making-of-port/
+│       └── index.html
+├── projects/
+│   └── index.html
+├── components.js
+├── index.html
+├── styles.css
+├── LICENSE
+└── README.md</code></pre>
+
+                <p>As you can see, this is a very simple static site that has it's assests (The images I use) under
+                    /assets, and three home pages named index.html, one which is the default About me page, and one for
+                    both the /blog and /projects sections under their folders. The blog entries are stored on /posts,
+                    with it's respective assets under that folder.</p>
+
+                <p>Among the few things worth mentioning are the components.js file, which contains the
+                    navigation bar and footer as custom HTML elements, so I can reuse them on every page instead of
+                    copying them around. It also checks the current URL to highlight the section you're in. On
+                    styles.css I use CSS variables for the colors and
+                    rounded corners and a mix of Flexbox and Grid to organize each page. A media query changes those
+                    layouts once the screen gets small enough. The About page becomes a single column, the project
+                    cards stack vertically, and the blog entries get smaller images. There is no separate mobile site
+                    or JavaScript moving things around, it is still the same HTML responding to the available space.</p>
+
+                <p>Finally, every section and blog entry has its own folder with an index.html file. This keeps the URLs
+                    clean and makes adding a new post fairly simple: create its folder under /posts, place any images
+                    under /posts/assets, and add the entry to the Blog page. There is no build step in between; once the
+                    changes are pushed, Vercel serves the files as they are. That's really all there is to it.</p>
+                <p style="font-size: smaller;">Note: The views expressed here are my own and do not represent those
+                    of any past, present, or future employer.</p>
             </article>
         </main>
 

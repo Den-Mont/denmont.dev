@@ -168,6 +168,7 @@ body {
   align-items: center;
   gap: 1.25rem;
   border-radius: 1.25rem;
+  font-family: "EB Garamond", serif;
   text-decoration: none;
 }
 
@@ -301,6 +302,29 @@ body {
   position: relative;
 }
 
+.post-layout {
+  height: calc(100vh - 16px);
+  overflow: hidden;
+}
+
+.post-layout .post-page {
+  box-sizing: border-box;
+  align-items: flex-start;
+  min-height: 0;
+  padding-block: 5rem 2rem;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+}
+
+.post-layout .post-page::-webkit-scrollbar {
+  display: none;
+}
+
+.post-layout .post {
+  margin: 0 auto;
+}
+
 .background .back-link {
   position: absolute;
   top: 1.5rem;
@@ -308,7 +332,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.65rem 0.9rem;
+  padding: 0.5rem 0.7rem;
   border-radius: var(--radius-control);
   color: var(--color-dark);
   background-color: var(--color-control);
@@ -321,6 +345,10 @@ body {
 .background .back-link:hover {
   color: var(--color-light);
   background-color: var(--color-hover);
+}
+
+.back-link i {
+  font-size: 1.1rem;
 }
 
 .post-header {
@@ -343,6 +371,51 @@ body {
   margin-inline: 0;
   font-size: 1.125rem;
   line-height: 1.6;
+}
+
+.post-mockups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.post-mockups figure {
+  margin: 0;
+}
+
+.post-mockups img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.post-mockups figcaption {
+  margin-top: 0.5rem;
+  color: var(--color-control);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.color-list {
+  padding: 0;
+  list-style: none;
+}
+
+.color-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-list span {
+  flex: 0 0 0.7rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px dotted var(--outline);
+  border-radius: 50%;
+  background-color: var(--swatch);
 }
 
 .social-navbar {
