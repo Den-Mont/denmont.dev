@@ -115,21 +115,12 @@ body {
 
 .about-copy {
   align-self: end;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  height: 18rem;
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
 .about-copy p {
-  align-self: center;
-  margin: 0;
   font-weight: 400;
-}
-
-.about-copy p + p {
-  margin-top: 0;
 }
 
 .blog-page {
@@ -493,6 +484,10 @@ body {
   .about-copy {
     display: block;
     height: auto;
+  }
+
+  .about-copy p {
+    margin: 0;
   }
 
   .about-copy p + p {
