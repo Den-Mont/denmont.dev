@@ -115,11 +115,17 @@ body {
 
 .about-copy {
   align-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  height: 18rem;
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
 .about-copy p {
+  margin: 0;
   font-weight: 400;
 }
 
