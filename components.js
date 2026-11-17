@@ -30,13 +30,13 @@ class SiteFooter extends HTMLElement {
       <footer>
         <nav class="social-navbar" aria-label="Social media links">
           <a href="https://github.com/Den-Mont" aria-label="GitHub">
-            <i class="hgi-stroke hgi-github-01" aria-hidden="true"></i>
+            <img src="/assets/github-dark.svg" width="24" height="24" alt="">
           </a>
           <a href="https://www.youtube.com/@den-mont" aria-label="YouTube">
-            <i class="hgi-stroke hgi-youtube" aria-hidden="true"></i>
+            <img src="/assets/youtube-dark.svg" width="24" height="24" alt="">
           </a>
           <a href="https://www.linkedin.com/in/denzelmontes-melendez" aria-label="LinkedIn">
-            <i class="hgi-stroke hgi-linkedin-01" aria-hidden="true"></i>
+            <img src="/assets/linkedin-dark.svg" width="24" height="24" alt="">
           </a>
         </nav>
       </footer>

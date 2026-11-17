@@ -439,8 +439,14 @@ body {
   background-color: var(--color-hover);
 }
 
-.social-navbar i {
-  font-size: 24px;
+.social-navbar img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-navbar a:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .navbar a:focus-visible,
